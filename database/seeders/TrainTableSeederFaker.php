@@ -27,7 +27,6 @@ class TrainTableSeederFaker extends Seeder
             $new_train->number_of_wagon = $faker->numerify('##');
             $new_train->on_time = $faker->boolean();
             $new_train->deleted = $faker->boolean();
-            $new_train->brand = $faker->words(1, true);
             
             $new_train->save();
         };
