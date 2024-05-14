@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('train', function (Blueprint $table) {
+        Schema::table('trains', function (Blueprint $table) {
             $table->string('brand')->after('deleted');
         });
     }
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('train', function (Blueprint $table) {
+        Schema::table('trains', function (Blueprint $table) {
             $table->dropColumn('brand');
         });
     }
