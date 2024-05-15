@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('agency', 100);
             $table->string('leaving_station', 100);
             $table->string('arrival_station', 100);
-            $table->datetime('leaving_at');
-            $table->datetime('arrival_at');
-            $table->tinyInteger('train_number')->unique;
-            $table->tinyInteger('number_of_wagon');
+            $table->string('leaving_at');
+            $table->string('arrival_at');
+            $table->string('train_number')->unique;
+            $table->string('number_of_wagon');
             $table->boolean('on_time')->default();
             $table->boolean('deleted')->default();
             $table->timestamps();

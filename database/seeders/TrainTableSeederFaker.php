@@ -16,19 +16,20 @@ class TrainTableSeederFaker extends Seeder
     {
         for( $i=0; $i<20; $i++ ){
 
-            $new_train = new Train();
+            $new_Train = new Train();
             
-            $new_train->agency = $faker->words(1, true);
-            $new_train->leaving_station = $faker->city();
-            $new_train->arrival_station = $faker->city();
-            $new_train->leaving_at = $faker->time();
-            $new_train->arrival_at = $faker->time();
-            $new_train->train_number = $faker->numerify('######');
-            $new_train->number_of_wagon = $faker->numerify('##');
-            $new_train->on_time = $faker->boolean();
-            $new_train->deleted = $faker->boolean();
-            
-            $new_train->save();
+            $new_Train->agency = $faker->words(1, true);
+            $new_Train->leaving_station = $faker->city();
+            $new_Train->arrival_station = $faker->city();
+            $new_Train->leaving_at = $faker->words(1, true);
+            $new_Train->arrival_at = $faker->words(1, true);
+            $new_Train->train_number = $faker->words(1, true);
+            $new_Train->number_of_wagon = $faker->words(1, true);
+            $new_Train->on_time = $faker->boolean();
+            $new_Train->deleted = $faker->boolean();
+            $new_Train->brand = $faker->words(1, true);
+
+            $new_Train->save();
         };
     }
 }
